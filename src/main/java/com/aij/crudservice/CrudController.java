@@ -11,6 +11,6 @@ public class CrudController {
     @GetMapping("/profile")
     public String getProfile() {
         String profile = RandomUsernameGeneration.generateRandomUsername();
-        return "Hello: " + profile;
+        return "Hello, " + profile +"!";
     }
 }
