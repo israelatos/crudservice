@@ -5,26 +5,21 @@ import lombok.Data;
 
 @Data
 public class UserProfile {
-    public UserProfile() {
-        this.id = id;
-        this.userName = userName;
-    }
 
     private String id;
     private String userName;
-//    other information
+    // Other information fields if needed
+
+    public UserProfile() {
+        // Default constructor is necessary for deserialization
+    }
 
     public UserProfile(String id, String userName) {
         this.id = id;
         this.userName = userName;
     }
-//
-//    public void setId(String string) {
-//    }
-//
-//    public String getId() {
-//        return JsonTypeInfo.Id;
-//    }
+
+    // Getter and setter methods for id
     public String getId() {
         return id;
     }
