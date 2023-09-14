@@ -1,13 +1,11 @@
 package com.aij.crudservice;
 
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.*;
-
-@RestController
-@RequestMapping("/")
 public class CrudController {
 
     private final Map<String, UserProfile> db = new HashMap<>();
@@ -15,16 +13,19 @@ public class CrudController {
     private final List<String> randomNames = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve", "Frank");
 
     @PostMapping("/user")
-    public UserProfile createUser() {
+    public UserProfile createUser(@RequestBody UserProfile userProfile) {
         String randomId = Integer.toString(idCounter++);
         String randomName = getRandomName();
 
-        UserProfile userProfile = new UserProfile(randomId, randomName);
+        userProfile.setId(randomId);
+        userProfile.setName(randomName);
+
         db.put(userProfile.getId(), userProfile);
 
         return userProfile;
     }
 
+    // Define getRandomName() method within the CrudController class
     private String getRandomName() {
         Random random = new Random();
         int randomIndex = random.nextInt(randomNames.size());

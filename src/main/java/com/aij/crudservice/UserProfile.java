@@ -27,4 +27,7 @@ public class UserProfile {
     public void setId(String id) {
         this.id = id;
     }
+
+    public void setName(String randomName) {
+    }
 }
