@@ -2,10 +2,13 @@ package com.aij.crudservice;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Data;
+import lombok.Getter;
 
 @Data
 public class UserProfile {
 
+    // Getter and setter methods for id
+    @Getter
     private String id;
     private String userName;
     // Other information fields if needed
@@ -17,11 +20,6 @@ public class UserProfile {
     public UserProfile(String id, String userName) {
         this.id = id;
         this.userName = userName;
-    }
-
-    // Getter and setter methods for id
-    public String getId() {
-        return id;
     }
 
     public void setId(String id) {
