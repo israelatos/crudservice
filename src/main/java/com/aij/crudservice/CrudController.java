@@ -17,10 +17,10 @@ public class CrudController {
     @PostMapping("/user")
     public UserProfile createUser(@RequestBody UserProfile userProfile) {
         String randomId = Integer.toString(idCounter++);
-        String randomName = getRandomName();
+//        String randomName = getRandomName();
 
         userProfile.setId(randomId);
-        userProfile.setName(randomName);
+//        userProfile.setName(randomName);
 
         db.put(userProfile.getId(), userProfile);
 
