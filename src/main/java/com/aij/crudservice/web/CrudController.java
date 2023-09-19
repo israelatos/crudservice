@@ -1,6 +1,8 @@
-package com.aij.crudservice;
+package com.aij.crudservice.web;
 
 
+import com.aij.crudservice.model.RandomUsernameGeneration;
+import com.aij.crudservice.model.UserProfile;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;

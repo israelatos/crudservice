@@ -1,4 +1,4 @@
-package com.aij.crudservice;
+package com.aij.crudservice.model;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import jakarta.validation.constraints.NotEmpty;

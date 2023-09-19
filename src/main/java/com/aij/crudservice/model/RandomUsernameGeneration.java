@@ -1,4 +1,4 @@
-package com.aij.crudservice;
+package com.aij.crudservice.model;
 import java.util.UUID;
 import java.util.Random;
 public class RandomUsernameGeneration {
